@@ -1,0 +1,85 @@
+.c-Calculadora {
+  &, * {
+    box-sizing: border-box;
+    color: $color_mine-shaft;
+    font-family: $font_base;
+    font-size: 13px;
+    outline: 0;
+  }
+  margin: 0 auto;
+  max-width: 250px;
+
+  &__content {
+    border: 1px solid $color_silver_a;
+    padding: 8px;
+  }
+
+  // Pantalla
+  &__pantalla {
+    border: 1px solid $color_silver-a;
+    display: table;
+    height: 30px;
+    margin-bottom: 5px;
+    width: 100%;
+    &__content {
+      display: table-cell;
+      font-size: 15px;
+      padding: 5px;
+      text-align: right;
+      vertical-align: middle;
+    }
+  }
+
+  // Bloque de números
+  &__numeros {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    width: 65%;
+  }
+  &__numero {
+    align-items: center;
+    background-color: $color_ebb;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    flex: none;
+    height: 30px;
+    justify-content: center;
+    width: 25%;
+    &:hover {
+      background-color: $color_silver-b;
+    }
+  }
+
+  // Bloque de operadores
+  &__operadores {
+    float: right;
+    width: 35%;
+  }
+  &__operador {
+    align-items: center;
+    background-color: $color_alto;
+    border: 2px solid white;
+    cursor: pointer;
+    display: flex;
+    font-size: 14px;
+    height: 30px;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    &:hover {
+      background-color: $color_silver-b;
+    }
+
+    &--igual {
+      background-color: $color_dodger-blue;
+      color: white;
+      font-weight: bold;
+      &:hover {
+        background-color: $color_royal-blue;
+      }
+    }
+  }
+}
